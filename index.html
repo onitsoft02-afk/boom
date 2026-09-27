@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="game-container glass-panel">
+        <!-- Game Header -->
+        <header class="game-header">
+            <h1 class="game-title">MINESWEEPER</h1>
+            <div class="controls">
+                <select id="difficulty-select" class="glass-select">
+                    <option value="beginner">초급 (9x9)</option>
+                    <option value="intermediate">중급 (16x16)</option>
+                    <option value="advanced">상급 (24x24)</option>
+                </select>
+            </div>
+            <div class="stats-board">
+                <div class="stat-box glass-inset">
+                    <span class="stat-icon">🚩</span>
+                    <span id="mines-count" class="digital-text">010</span>
+                </div>
+                <div class="stat-box glass-inset">
+                    <span class="stat-icon">⭐</span>
+                    <span id="score" class="digital-text">0000</span>
+                </div>
+                <button id="reset-btn" class="glass-btn primary" style="display: flex; align-items: center; gap: 8px;">
+                    <span id="face-icon">😊</span> 다시 시작
+                </button>
+                <div class="stat-box glass-inset">
+                    <span class="stat-icon">⏱️</span>
+                    <span id="timer" class="digital-text">000</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="board-wrapper glass-inset">
+            <div id="game-board" class="game-board"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
